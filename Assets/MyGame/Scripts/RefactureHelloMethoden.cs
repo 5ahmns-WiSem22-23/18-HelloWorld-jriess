@@ -6,18 +6,17 @@ public class RefactureHelloMethoden : MonoBehaviour
     {
         plus,
         minus,
-        multiplicate,
-        divide
     }
 
     Operators operatorToTake;
 
     private void Start()
     {
-        IncrementValue(1, 4, operatorToTake);
+        operatorToTake = Operators.plus;
+        ChangeValue(1, 4, operatorToTake);
     }
 
-    int IncrementValue(int baseValue, int valueToAdjust, Operators operators)
+    int ChangeValue(int baseValue, int valueToAdjust, Operators operators)
     {
         if(operators == Operators.plus)
         {
@@ -26,14 +25,6 @@ public class RefactureHelloMethoden : MonoBehaviour
         else if(operators == Operators.minus)
         {
             baseValue -= valueToAdjust;
-        }
-        else if(operators == Operators.multiplicate)
-        {
-            baseValue *= valueToAdjust;
-        }
-        else if(operators == Operators.divide)
-        {
-            baseValue /= valueToAdjust;
         }
         
         return baseValue;
