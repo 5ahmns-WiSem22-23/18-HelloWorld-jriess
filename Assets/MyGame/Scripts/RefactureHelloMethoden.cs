@@ -8,12 +8,10 @@ public class RefactureHelloMethoden : MonoBehaviour
         minus,
     }
 
-    Operators operatorToTake;
-
     private void Start()
     {
-        operatorToTake = Operators.plus;
-        ChangeValue(1, 4, operatorToTake);
+        Debug.Log(ChangeValue(8, 3, Operators.plus));
+        Debug.Log(ChangeValue(8, 3, Operators.minus));
     }
 
     int ChangeValue(int baseValue, int valueToAdjust, Operators operators)
